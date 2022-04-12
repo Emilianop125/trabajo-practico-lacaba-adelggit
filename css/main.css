@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* dos unidades de medida
+em
+rem*/
+
+/*1 em=16px (no siempre es del todo cierto)*/
+
+body{
+    background-color: #f8ced8;
+}
+
+header h1{
+    text-align: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+}
+
+.mainNosotros{
+    height: 80vh;
+    display: grid;
+    grid-template-areas: "mainP mainP"
+                        "imagen1 imagen2"
+                        "imagen3 imagen4"
+                        "parrafo parrafo";
+    justify-content: center;                    
+}
+
+nav ul li:hover{
+    background-color: aqua;
+    transform: scale(1.2);
+    transition: 0.5s;
+    
+}
+
+.sectionNosotros{
+    display: none;
+}
+
+.mainP{
+    text-align: center;
+    grid-area: mainP;
+}
+
+.imagen1{
+    grid-area: imagen1;
+
+}
+
+.imagen2{
+    grid-area: imagen2
+
+}
+
+.imagen3{
+    grid-area: imagen3
+
+}
+
+.imagen4{
+    grid-area: imagen4
+
+}
+
+.parrafo{
+    grid-area: parrafo;
+}
+
+footer p{
+    text-align: center;
+}
+
+/*media queries*/
+
+@media only screen and (min-width: 600px){ 
+    body{
+        background-color: brown;
+    }
+
+.mainNosotros{
+    height: 80vh;
+    display: grid;
+    grid-template-areas: "mainP mainP mainP mainP"
+                         "img img img img"
+                         "imagen1 imagen2 imagen3 imagen4"
+                         "parrafo parrafo parrafo parrafo";
+    justify-content: center;                    
+    }    
+
+.luna {
+    width: 60deg;
+    animation-name: girar;
+    animation-iteration-count: infinite;
+    animation-duration: 60s;
+}
+@keyframes girar{
+    forma{
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+
+}   
